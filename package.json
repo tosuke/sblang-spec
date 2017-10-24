@@ -1,0 +1,27 @@
+{
+  "name": "sblang-spec",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/Tosuke/sblang-spec.git",
+  "author": "Tosuke <tasukeprg@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gitbook build src public",
+    "serve": "gitbook serve src public",
+    "lint": "textlint 'src/**/*.md'",
+    "fix": "textlint --fix 'src/**/*.md'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.md": ["textlint --fix", "textlint", "git add"]
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "textlint": "^8.2.1",
+    "textlint-rule-preset-ja-technical-writing": "^0.1.3"
+  }
+}
