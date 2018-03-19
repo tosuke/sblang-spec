@@ -1,0 +1,44 @@
+# 語句
+
+言語の各トークンの種類についての仕様。
+
+## 予約語
+- IF
+- THEN
+- ELSE
+- ENDIF
+- GOTO
+- GOSUB
+- RETURN
+- ON
+- FOR
+- NEXT
+- WHILE
+- WEND
+- REPEAT
+- UNTIL
+- BREAK
+- CONTINUE
+- DEF
+- END
+- VAR
+- DIM
+- AND
+- OR
+- XOR
+- NOT
+- DATA
+- READ
+- RESTORE
+- PRINT
+- INPUT
+- LINPUT
+- CALL
+- TRUE
+- FALSE
+- SWAP
+- OUT
+- COMMON
+- USE
+- EXEC
+
