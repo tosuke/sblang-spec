@@ -5,27 +5,21 @@
   "repository": "ssh://git@github.com/Tosuke/sblang-spec.git",
   "author": "Tosuke <tasukeprg@gmail.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "gitbook build src public",
-    "serve": "gitbook serve src public",
-    "lint": "textlint 'src/**/*.md'",
-    "fix": "textlint --fix 'src/**/*.md'",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.md": [
-      "textlint --fix",
-      "textlint",
-      "git add"
-    ]
-  },
-  "dependencies": {
-    "gitbook-cli": "^2.3.2"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "lint": "textlint 'docs/**/*.md' 'docs/*.md'",
+    "fix": "textlint --fix 'docs/**/*.md', 'docs/*.md'",
+    "precommit": "run-s lint"
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
-    "textlint": "^10.1.4",
-    "textlint-rule-preset-ja-technical-writing": "^2.0.0"
+    "npm-run-all": "^4.1.3",
+    "textlint": "^10.2.1",
+    "textlint-rule-period-in-list-item": "^0.2.0",
+    "textlint-rule-preset-ja-technical-writing": "^2.0.0",
+    "textlint-rule-prh": "^5.0.1",
+    "vuepress": "^0.10.1"
   }
 }
